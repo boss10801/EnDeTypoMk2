@@ -17,8 +17,7 @@ def Cesar(Input, Type):
     # print(key)
     # print(lenght)
     if (Type == 1): #Encrypt
-        i = 0
-        j = 0
+        i,j = 0,0
         print("i=",i,"j=",j)
 
 
