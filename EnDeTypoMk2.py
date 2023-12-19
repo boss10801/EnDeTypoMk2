@@ -24,12 +24,15 @@ def Cesar(Input, Type):
                 j = 0
             # Convert InputList to ASCII
             ascii_value = ord(InputList[i])
-            #print("ascii of input:",ascii_value)
 
             # Make it in range of ASCII from 32 to 126 
             # which will be space to ~
-            encrypted_value = (ascii_value + int(key[j])) % (126 - 32 + 1) + 32
-            #print("Encrypted input:", encrypted_value)
+            encrypted_value = (ascii_value + int(key[j]))
+            if (encrypted_value>126):
+                temp = encrypted_value - 126    # Return as Possitive Number
+                encrypted_value = 32 + temp     # from 127 to 1
+
+            print(ascii_value ,"->", encrypted_value)
             
             # Convert back to char
             InputList[i] = chr(encrypted_value)
@@ -38,8 +41,35 @@ def Cesar(Input, Type):
         # Convert InputList(List) back to Input(string)
         Input = ''.join(InputList)
         print("<Encrypt>"+Input+"<Encrypt>")
+    elif (Type == 2): #Decrypt
+        i,j = 0,0
+        for i in range(len(InputList)):
+            if(j == lenght):
+                j = 0
+            # Convert InputList to ASCII
+            ascii_value = ord(InputList[i])
+
+            # Make it in range of ASCII from 32 to 126 
+            # which will be space to ~
+            decrypted_value = (ascii_value - int(key[j])) # change from + to -
+            if (decrypted_value<32):
+                temp = decrypted_value - 32     # Return as Negative Number
+                decrypted_value = 126 + temp    # from -1 to 125
+
+            print(ascii_value ,"->", decrypted_value)
+            
+            # Convert back to char
+            InputList[i] = chr(decrypted_value)
+            j += 1
+
+        # Convert InputList(List) back to Input(string)
+        Input = ''.join(InputList)
+        print("<Decrypt>"+Input+"<Decrypt>")
         
     keyFile.close
 
 
 Cesar("Sussy oil",1)
+Cesar("U}yz$$wmm",2)
+#Sussy oil
+#<En>u>:;CD8..<En>
