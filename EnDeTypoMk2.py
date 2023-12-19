@@ -40,7 +40,8 @@ def Cesar(Input, Type):
 
         # Convert InputList(List) back to Input(string)
         Input = ''.join(InputList)
-        print("<Encrypt>"+Input+"<Encrypt>")
+        return Input
+        # print("<Encrypt>"+Input+"<Encrypt>")
     elif (Type == 2): #Decrypt
         i,j = 0,0
         for i in range(len(InputList)):
@@ -64,12 +65,7 @@ def Cesar(Input, Type):
 
         # Convert InputList(List) back to Input(string)
         Input = ''.join(InputList)
-        print("<Decrypt>"+Input+"<Decrypt>")
-        
+        return Input
+        # print("<Decrypt>"+Input+"<Decrypt>")        
     keyFile.close
 
-
-Cesar("As my mom said No SHOOTING IN OUR 101 Battlion",1)
-Cesar("C{&t$$usn&uiok)Rw$TNQWZPWK(MO&Q]X':49$Cgv|rpxr",2)
-#Sussy oil
-#<En>u>:;CD8..<En>
