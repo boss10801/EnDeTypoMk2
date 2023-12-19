@@ -32,7 +32,7 @@ def Cesar(Input, Type):
                 temp = encrypted_value - 126    # Return as Possitive Number
                 encrypted_value = 32 + temp     # from 127 to 1
 
-            print(ascii_value ,"->", encrypted_value)
+            #print(ascii_value ,"->", encrypted_value)
             
             # Convert back to char
             InputList[i] = chr(encrypted_value)
@@ -56,7 +56,7 @@ def Cesar(Input, Type):
                 temp = decrypted_value - 32     # Return as Negative Number
                 decrypted_value = 126 + temp    # from -1 to 125
 
-            print(ascii_value ,"->", decrypted_value)
+            #print(ascii_value ,"->", decrypted_value)
             
             # Convert back to char
             InputList[i] = chr(decrypted_value)
@@ -69,7 +69,7 @@ def Cesar(Input, Type):
     keyFile.close
 
 
-Cesar("Sussy oil",1)
-Cesar("U}yz$$wmm",2)
+Cesar("As my mom said No SHOOTING IN OUR 101 Battlion",1)
+Cesar("C{&t$$usn&uiok)Rw$TNQWZPWK(MO&Q]X':49$Cgv|rpxr",2)
 #Sussy oil
 #<En>u>:;CD8..<En>
