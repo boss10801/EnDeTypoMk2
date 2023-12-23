@@ -1,4 +1,5 @@
 import os
+import base64
 
 keyFilePath = 'key.txt'
 
@@ -69,3 +70,21 @@ def Cesar(Input, Type):
         # print("<Decrypt>"+Input+"<Decrypt>")        
     keyFile.close
 
+def encode(Input):
+    # Encode the string to base64
+    encodedByte = base64.b64encode(Input.encode('UTF-8')) #come as byte
+    # Decode the base64-encoded string
+    encodedString = encodedByte.decode('utf-8')
+    return encodedString
+
+def decode(Input):
+    # Decode the base64-encoded string
+    decodedBytes = base64.b64decode(Input) #come as byte
+    # Convert the bytes to a string
+    decodedString = decodedBytes.decode('utf-8')
+    return decodedString
+
+
+Input = "Hi"
+print(encode(Input))
+print(Cesar(encode(Input), 1))
