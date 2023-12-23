@@ -86,16 +86,35 @@ def decode(Input):
     decodedString = decodedBytes.decode('utf-8')
     return decodedString
 
+def interface():
+    message = "Welcome to EnDeTypoMk2"
+    line = "=" * len(message)
+    print(line+'\n'+message+'\n'+line)
+    while(True):
+        wellcome = """What would you like today
+        press 1 for Encrypt a message
+        press 2 for Decrypt a message
+        Type "quit" to exit the program"""
+        opt = input(wellcome+'\nYour answer: ')
+        if (opt == 'quit'):
+            break
+        if ((opt != '1' ) and (opt != '2')):
+            print("Error: Wrong Input format (Terminate Program)")
+            exit(1)
+        message = input("Your message please: ")
+        if (opt == '1'):
+            encore = encode(message)
+            encry = cesarEncrypt(encore)
+            print('Your Encrypted Message is:')
+            line2 = '=' * len(encry)
+            print(line2+'\n'+encry+'\n'+line2)
+        elif (opt == '2'):
+            decry = cesarDecrypt(message)
+            print('Decrpt as:',decry)
+            decore = decode(decry)
+            print('Your Decrypted Message is:')
+            line2 = '=' * len(decore)
+            print(line2+'\n'+decore+'\n'+line2)
 
-# # Test Flow
-# Input = "Hi"
-
-# encore = encode(Input)
-# print('Encode as:',encore)
-# encry = cesarEncrypt(encore)
-# print('Encrpt as:',encry)
-
-# decry = cesarDecrypt(encry)
-# print('Decrpt as:',decry)
-# decore = decode(decry)
-# print('Decode as:',decore)
+# Call interface to start program
+interface()
