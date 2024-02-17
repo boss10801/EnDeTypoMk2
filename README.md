@@ -2,7 +2,7 @@
 EnDeTypoMk2 is a Python-based encryption and decryption tool which transforms normal text into base64 and then applies a modified Caesar cipher.
 ## About this program
 The EnDeTypoMk2 is design based on Caesar cipher(substitution cipher) which is shifting letter just like the first EnDeTypo that written in C language. But in this Mk2 variation, I design it to work with hbase64 encoder and my modified Caesar cipher.  
-I have modified the Caesar cipher from shifting by just one number in plain text to shifting it with many random number in the key.txt file.  So let's say you have a word "Hello" and the key has the number "153467" so the cipher text should be like this 
+I have modified the Caesar cipher from shifting by just one number in plain text to shifting it with many random number in the key.txt file.  So let's say you have a word "Hello" and the key has the number "1534672" so the cipher text should be like this 
 ```
 Plain text:  Hello
 keys:        1534672
